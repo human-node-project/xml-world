@@ -48,20 +48,42 @@
             <face>Object example - transparency</face>
             <body>
                 <!-->
-                    The aspect attribute can have the following values:
+                    The "aspect" attribute can have the following values:
                     * opaque (default)
                     * transparent
                     * hidden
-                    Agents cannot see the body tag of an opaque object.
+                    Agents cannot see the body tag of an opaque object (subjective view explained later).
                     Agents cannot see an hidden object.
                 <-->
                 <object>
-                    <face>I'm not hidden!</face>
+                    <face>I'm not hidden because my container is transparent!</face>
                 </object>
             </body>
         </object>
         
+
+        <object fixed>
+          <face>Object example - fixed objects</face>
+          <!-->
+            Objects with attribute "fixed" cannot be taken by agents.
+            They cannot be moved.  
+          <-->
+        </object>
         
+
+        <object openable access="closed">
+          <face>Object example - openable objects</face>
+          <!-->
+            Objects with attribute "openable" can be open or closed.
+            Agents cannot access the content of the body of closed objects.
+            Agents cannot see the content of the body of closed objects.
+            The "access" can have the following values:
+            * open (default)
+            * closed
+          <-->
+        </object>
+
+
     </room>
 </world>
 

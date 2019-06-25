@@ -1,0 +1,72 @@
+<!DOCTYPE something>
+<world>
+    <room>
+    
+        <room>
+            <!-->
+                Rooms are just the XML-World equivalent of DIVs.
+                They can be nested.
+                They can contain objects, agents, and other rooms.
+            <-->
+        </room>
+    
+    
+        <object>
+            <face>
+                <!-- The face of an object is its appearance. -->
+                <div>
+                    <p>This is the appearance of the object.</p>
+                    <img src="image.png" />
+                    <!-->
+                        Classic HTML5 here! The Ai doesn't natively understand this HTML, but it can learn to recognize features, common points, ...etc.
+                    <-->
+                </div>
+            </face>
+            <body>
+                <!-->
+                    This is the content of the object.
+                    It can contain nested objects and agents.
+                <-->
+            </body>
+        </object>
+        
+        
+        <agent>
+            <face>
+                <p>That's another HTML5 section, for the appearance of this agent. Same as objects faces.</p>
+            </face>
+            <body>
+                <!-->
+                    That's the content of an agent.
+                    It can contain nested objects, that an agent would be "carrying".
+                <-->
+            </body>
+        </agent>
+        
+        
+        <object aspect="transparent">
+            <face>Object example - transparency</face>
+            <body>
+                <!-->
+                    The aspect attribute can have the following values:
+                    * opaque (default)
+                    * transparent
+                    * hidden
+                    Agents cannot see the body tag of an opaque object.
+                    Agents cannot see an hidden object.
+                <-->
+                <object>
+                    <face>I'm not hidden!</face>
+                </object>
+            </body>
+        </object>
+        
+        
+    </room>
+</world>
+
+
+
+
+
+

@@ -52,7 +52,8 @@
                     * opaque (default)
                     * transparent
                     * hidden
-                    Agents cannot see the body tag of an opaque object (subjective view explained later).
+                    Agents cannot see the body tag of an opaque object.
+                    Agents cannot see beyond an opaque object (subjective view explained later).
                     Agents cannot see an hidden object.
                 <-->
                 <object>
@@ -65,9 +66,10 @@
         <object fixed>
           <face>Object example - fixed objects</face>
           <!-->
-            Objects with attribute "fixed" cannot be taken by agents.
-            They cannot be moved.  
+            Objects with attribute "fixed" cannot be taken away (carried) by agents.
+            They cannot be moved to another place.
           <-->
+          <body></body>
         </object>
         
 
@@ -77,10 +79,39 @@
             Objects with attribute "openable" can be open or closed.
             Agents cannot access the content of the body of closed objects.
             Agents cannot see the content of the body of closed objects.
-            The "access" can have the following values:
+            The "access" attribute can have the following values:
             * open (default)
             * closed
           <-->
+          <body></body>
+        </object>
+        
+
+        <object enterable access="closed">
+          <face>Object example - openable objects</face>
+          <!-->
+            Objects with attribute "enterable" can be entered by agents.
+            The "access" attribute controls whether the object is currently closed (impossible to enter) or open (possible to enter).
+            It is the same "access" attribute that controls also the possibility of accessing the body of an openable object. 
+          <-->
+          <body></body>
+        </object>
+        
+
+        <object script="bouncing-ball.js" prototype="Ball">
+          <face>Object example - scripted objects</face>
+          <api>
+            <method name="kick">
+              <parameter type="number">strength</parameter>
+              <parameter type="string">direction (north south west east)</parameter>
+            </method>
+            <property name="velocity">velocity of the ball</property>
+          </api>
+          <!-->
+            Objects with attribute "script" have an associated API defined in the Js file given as attribute value.
+            The content of the "method" & "property" tags is a natural language description of the method/property. Ai can learn to recognize these descriptions.
+          <-->
+          <body></body>
         </object>
 
 

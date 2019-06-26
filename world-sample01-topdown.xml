@@ -1,0 +1,32 @@
+<!DOCTYPE world SYSTEM "topdown">
+<world>
+
+    <room>
+
+        <object id="faraway">
+            <face>
+                The agent cannot see this object because it is hidden behind the #wall object.
+            </face>
+        </object>
+
+
+        <object id="wall" aspect="opaque">
+            <face>
+                This object blocks the sight of the agent, because it is opaque.
+            </face>
+        </object>
+
+
+        <agent>
+            <face>
+                The subjective view of this agent is shown in the file "world-sample01-subjective.xml".
+            </face>
+        </agent>
+
+
+        <object >
+        </object>
+
+    </room>
+
+</world>

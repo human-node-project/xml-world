@@ -1,28 +1,12 @@
-<!DOCTYPE something>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE world []>
 <world>
-
     <head>
-
-        <script src="bouncing-ball.js"> <!-- scripts contain prototypes for scripted objects -->
-
-        <api prototype="Ball">
-            <method name="kick">
-                <parameter type="number">strength</parameter>
-                <parameter type="string">direction (north south west east)</parameter>
-            </method>
-            <property name="velocity" type="number">velocity of the ball</property>
-            <!-->
-                The content of the "method" & "property" tags is a natural language description of the method/property. Ai can learn to recognize these descriptions.
-            <-->
-        </api>
-
+        <script src="bouncing-ball.js"></script>
+        <!-- scripts contain prototypes for scripted objects -->
     </head>
-
     <body>
-
         <room>
-
-
             <room>
                 <!-->
                     Rooms are just the XML-World equivalent of DIVs.
@@ -30,8 +14,6 @@
                     They can contain objects, agents, and other rooms.
                 <-->
             </room>
-
-
             <object>
                 <face>
                     <!-- The face of an object is its appearance. -->
@@ -50,8 +32,6 @@
                     <-->
                 </body>
             </object>
-
-
             <agent>
                 <face>
                     <p>That's another HTML5 section, for the appearance of this agent. Same as objects faces.</p>
@@ -63,8 +43,6 @@
                     <-->
                 </body>
             </agent>
-
-
             <object aspect="transparent">
                 <face>Object example - transparency</face>
                 <!-->
@@ -82,9 +60,7 @@
                     </object>
                 </body>
             </object>
-
-
-            <object fixed>
+            <object fixed="true">
                 <face>Object example - fixed objects</face>
                 <!-->
                     Objects with attribute "fixed" cannot be taken away (carried) by agents.
@@ -92,9 +68,7 @@
                 <-->
                 <body></body>
             </object>
-
-
-            <object openable access="closed">
+            <object openable="true" access="closed">
                 <face>Object example - openable objects</face>
                 <!-->
                     Objects with attribute "openable" can be open or closed.
@@ -106,9 +80,7 @@
                 <-->
                 <body></body>
             </object>
-
-
-            <object enterable access="closed">
+            <object enterable="true" access="closed">
                 <face>Object example - openable objects</face>
                 <!-->
                     Objects with attribute "enterable" can be entered by agents.
@@ -117,35 +89,28 @@
                 <-->
                 <body></body>
             </object>
-
-
             <object prototype="Ball">
                 <face>Object example - scripted objects</face>
-                <property name="velocity">35</property>
+                <api>
+                    <method name="kick">
+                        <parameter type="number">strength</parameter>
+                        <parameter type="string">direction (north south west east)</parameter>
+                    </method>
+                    <property name="velocity" type="number">velocity of the ball</property>
+                </api>
                 <!-->
-                    Objects with attribute "prototype" have an API defined in the prototype given as attribute value.
+                    Objects with attribute "script" have an associated API defined in the Js file given as attribute value.
+                    The content of the "method" & "property" tags is a natural language description of the method/property. Ai can learn to recognize these descriptions.
                 <-->
                 <body></body>
             </object>
-
-
             <object id="my-doodoo" class="toy small">
-                <face>Object example - id & class</face>
+                <face>Object example - id and class</face>
                 <!-->
-                    Objects can have ids and classes. Classes indicate the categories the object belongs to, while id makes it unique, as expected.
+                    Objects can have ids and classes. Classes indicate the categories the object belongs to, while id makes it unique.
                 <-->
                 <body></body>
             </object>
-
-
         </room>
-
     </body>
-    
 </world>
-
-
-
-
-
-

@@ -7,7 +7,7 @@
     </head>
     <body>
         <room>
-            <room>
+            <room id="jail">
                 <!-->
                     Rooms are just the XML-World equivalent of DIVs.
                     They can be nested.
@@ -43,7 +43,7 @@
                     <-->
                 </body>
             </agent>
-            <object aspect="transparent">
+            <object aspect="opaque">
                 <face>Object example - transparency</face>
                 <!-->
                     The "aspect" attribute can have the following values:
@@ -56,7 +56,7 @@
                 <-->
                 <body>
                     <object>
-                        <face>I'm not hidden because my container is transparent!</face>
+                        <face>I'm hidden because my container is opaque!</face>
                     </object>
                 </body>
             </object>
@@ -111,6 +111,13 @@
                 <-->
                 <body></body>
             </object>
+            <exit href="jail">
+                <face></face>
+                <!-->
+                    Exits allow agents and teachers to movee from room to room.
+                    It is the only way to access the parent room, or any ancestor room.
+                <-->
+            </exit>
         </room>
     </body>
 </world>

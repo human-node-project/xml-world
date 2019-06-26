@@ -47,8 +47,8 @@
                 <face>Object example - transparency</face>
                 <!-->
                     The "aspect" attribute can have the following values:
-                    * opaque (default)
-                    * transparent
+                    * transparent (default)
+                    * opaque
                     * hidden
                     Agents cannot see the body tag of an opaque object.
                     Agents cannot see beyond an opaque object (subjective view explained later).

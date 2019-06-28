@@ -114,10 +114,15 @@
             <exit href="jail">
                 <face></face>
                 <!-->
-                    Exits allow agents and teachers to movee from room to room.
+                    Exits allow agents and teachers to move from room to room.
                     It is the only way to access the parent room, or any ancestor room.
                 <-->
             </exit>
+            <room id="jail">
+                <!-->
+                    Agents can always get in a room, but the only way to get out is to use an exit.
+                <-->
+            </room>
         </room>
     </body>
 </world>

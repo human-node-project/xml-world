@@ -1,5 +1,5 @@
 
-jeda.module.mod8 = {
+jeda.module.mod9 = {
 
     name: "Socket 2",
 

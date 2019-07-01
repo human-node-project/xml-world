@@ -1,0 +1,45 @@
+
+
+
+This is a prefix notation for a network of cons cells.
+
+A B/ C/
+the cell A links B and C
+
+A B D/ E/ C/
+B links D and E, A links B and C
+
+
+#
+   # Symbol/
+      # Thing/
+      # #9 Thing/ ISA_Car/
+      # ISA_Car/ #
+   # Definition/
+      # # ISA/ #i Thing/ Car/
+      # #i/
+      # ISA/
+      # Car/
+      # Thing/ #
+
+
+[id9 Thing/ ISA_Car/]
+[id8 ISA/ id7 Car/ Thing/]
+
+[id10
+  (Definition id8 id7 ISA Car Thing)
+  (Symbol Thing id9 ISA_Car)
+]
+
+
+=================
+
+
+
+
+[#
+  ( Definition [#: ISA #: Car Thing] )
+  ( Symbol [#: Thing ISA_Car] )
+]
+
+

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE world []>
+<world>
+    <head>
+        <script src="bouncing-ball.js"></script>
+        <!-- scripts contain prototypes for scripted objects -->
+    </head>
+    <body>
+        <room>
+            <room id="jail">
+                <!-->
+                    Rooms are just the XML-World equivalent of DIVs.
+                    They can be nested.
+                    They can contain objects, agents, and other rooms.
+                <-->
+            </room>
+            <object>
+                <face>
+                    <!-- The face of an object is its appearance. -->
+                    <div>
+                        <p>This is the appearance of the object.</p>
+                        <img src="image.png" />
+                        <!-->
+                            Classic HTML5 here! The Ai doesn't natively understand this HTML, but it can learn to recognize features, common points, ...etc.
+                        <-->
+                    </div>
+                </face>
+                <body>
+                    <!-->
+                        This is the content of the object.
+                        It can contain nested objects and agents.
+                    <-->
+                </body>
+            </object>
+            <agent>
+                <face>
+                    <p>That's another HTML5 section, for the appearance of this agent. Same as objects faces.</p>
+                </face>
+                <body>
+                    <!-->
+                        That's the content of an agent.
+                        It can contain nested objects, that an agent would be "carrying".
+                    <-->
+                </body>
+            </agent>
+            <object aspect="opaque">
+                <face>Object example - transparency</face>
+                <!-->
+                    The "aspect" attribute can have the following values:
+                    * transparent (default)
+                    * opaque
+                    * hidden
+                    Agents cannot see the body tag of an opaque object.
+                    Agents cannot see beyond an opaque object (subjective view explained later).
+                    Agents cannot see an hidden object.
+                <-->
+                <body>
+                    <object>
+                        <face>I'm hidden because my container is opaque!</face>
+                    </object>
+                </body>
+            </object>
+            <object fixed="true">
+                <face>Object example - fixed objects</face>
+                <!-->
+                    Objects with attribute "fixed" cannot be taken away (carried) by agents.
+                    They cannot be moved to another place.
+                <-->
+                <body></body>
+            </object>
+            <object openable="true" access="closed">
+                <face>Object example - openable objects</face>
+                <!-->
+                    Objects with attribute "openable" can be open or closed.
+                    Agents cannot access the content of the body of closed objects.
+                    Agents cannot see the content of the body of closed objects.
+                    The "access" attribute can have the following values:
+                    * open (default)
+                    * closed
+                <-->
+                <body></body>
+            </object>
+            <object enterable="true" access="closed">
+                <face>Object example - openable objects</face>
+                <!-->
+                    Objects with attribute "enterable" can be entered by agents.
+                    The "access" attribute controls whether the object is currently closed (impossible to enter) or open (possible to enter).
+                    It is the same "access" attribute that controls also the possibility of accessing the body of an openable object. 
+                <-->
+                <body></body>
+            </object>
+            <object prototype="Ball">
+                <face>Object example - scripted objects</face>
+                <api>
+                    <method name="kick">
+                        <parameter type="number">strength</parameter>
+                        <parameter type="string">direction (north south west east)</parameter>
+                    </method>
+                    <property name="velocity" type="number">velocity of the ball</property>
+                </api>
+                <!-->
+                    Objects with attribute "script" have an associated API defined in the Js file given as attribute value.
+                    The content of the "method" & "property" tags is a natural language description of the method/property. Ai can learn to recognize these descriptions.
+                <-->
+                <body></body>
+            </object>
+            <object id="my-doodoo" class="toy small">
+                <face>Object example - id and class</face>
+                <!-->
+                    Objects can have ids and classes. Classes indicate the categories the object belongs to, while id makes it unique.
+                <-->
+                <body></body>
+            </object>
+            <exit href="jail">
+                <face></face>
+                <!-->
+                    Exits allow agents and teachers to move from room to room.
+                    It is the only way to access the parent room, or any ancestor room.
+                <-->
+            </exit>
+            <room id="jail">
+                <!-->
+                    Agents can always get in a room, but the only way to get out is to use an exit.
+                <-->
+            </room>
+        </room>
+    </body>
+</world>

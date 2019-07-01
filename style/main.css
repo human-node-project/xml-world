@@ -1,0 +1,146 @@
+
+body {
+    color: white;
+    font-family: asapregular;
+    font-size: 0.8rem;
+    background: #000;
+}
+
+#logo {
+    border-bottom: 1px solid #000;
+    padding-right: 1px;
+    background: #111;
+}
+
+#logo img {
+    border-bottom: 4px solid #00CC11;
+}
+
+#panel_container {
+    position: fixed;
+    height: 100vh;
+}
+
+#panel {
+    font-family: asapregular;
+    background: #222;
+    width: calc(100% + 17px);
+    height: calc(100vh + 17px);
+    border-left: 1px solid #000;
+    overflow: scroll;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#splitter .jqx-splitter-splitbar-vertical,
+#splitter {
+    background: #000;
+    border: none;
+    box-sizing: border-box;
+}
+
+#splitter .jqx-splitter-splitbar-vertical:hover {
+    background: #333;
+    border: 1px solid #000;
+}
+
+#splitter .jqx-splitter-collapse-button-vertical {
+    display: none;
+}
+
+
+#main_container {
+    height: 100vh;
+}
+
+#main {
+    font-family: asapregular;
+    background: #000;
+    width: calc(100% + 17px);
+    height: calc(100vh + 17px);
+    overflow: scroll;
+}
+
+.panel_item {
+    background: #222;
+    padding: 1em;
+    border-bottom: 1px solid #000;
+    cursor: default;
+}
+
+.panel_item:hover {
+    background: #333;
+    color: #fff !important;
+}
+
+.board_item {
+    text-align: right;
+    background: #111;
+    color: #bbb;
+    margin-top: 18px;
+    margin-left: 18px;
+    margin-right: 18px;
+    border-left: 2px solid #111;
+}
+
+.board_item_title {
+    max-width: 100%;
+    display: inline-block;
+    height: 18px;
+}
+
+.board_item_title_text {
+    max-width: calc(100% - 40px - 2em);
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    background: #222;
+    border-bottom: 1px solid #000;
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 18px;
+    line-height: 18px;
+}
+
+.board_item_title:before {
+    content: url(../image/left-border.png);
+}
+
+.board_item_title:after {
+    content: url(../image/right-border.png);
+}
+
+.board_item:hover .board_item_title:before {
+    content: url(../image/left-border-light.png);
+}
+
+.board_item:hover .board_item_title:after {
+    content: url(../image/right-border-light.png);
+}
+
+.board_item_content {
+    text-align: left;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 18px;
+}
+
+.board_item:hover .board_item_title_text {
+    color: #fff;
+    background: #333;
+}
+
+.board_item:hover {
+    border-left: 2px solid #333;
+}
+
+#formWrap {
+    background: #111 !important;
+}
+
+input, button, textarea {
+    margin-right: 1em !important;
+    margin-bottom: 1em !important;
+}

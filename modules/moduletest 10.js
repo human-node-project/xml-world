@@ -80,31 +80,38 @@ jeda.module.mod10 = {
                         {
                             selector: 'node',
                             style: {
-                                'background-color': '#666',
+                                'text-valign': 'center',
+                                'text-halign': 'center',
+                                'shape': 'round-rectangle',
+                                'background-color': '#333',
                                 'overlay-color': '#0F0',
                                 'label': 'data(id)',
                                 'color': '#ccc',
-                                'text-background-color': '#111',
-                                'text-background-opacity': 0.5,
-                                'width': 15,
-                                'height': 15
+                                //'text-background-color': '#111',
+                                //'text-background-opacity': 0.5,
+                                'height': 'label',
+                                'width': 'label',
+                                'padding': '8px',
+                                'font-size': '16px',
+                                'font-family': 'asapregular'
                             }
                         },
                         {
                             selector: 'node:selected',
                             style: {
                                 'background-color': '#00CC11',
+                                'color': '#111'
                             }
                         },
                         {
                             selector: 'edge',
                             style: {
-                                'width': 5,
+                                'width': 3,
                                 'curve-style': 'bezier',
                                 'line-color': '#999',
                                 'target-arrow-color': '#999',
                                 'target-arrow-shape': 'triangle',
-                                'arrow-scale': 1.25
+                                'arrow-scale': 1
                             }
                         }
                     ],

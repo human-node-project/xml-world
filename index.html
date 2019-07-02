@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC>
 <html lang="en">
+
 <head>
     <title>Jeda</title>
 
@@ -10,12 +11,12 @@
     <link rel="stylesheet" href="style/Asap font/stylesheet.css">
     <link rel="stylesheet" href="jqwidgets/styles/jqx.base.css">
     <link rel="stylesheet" href="jqwidgets/styles/green-dark-metro.css">
-    
+
     <script src="script/jquery.js"></script> <!-- v3.11.1 -->
     <script src="script/lodash.min.js"></script>
     <script src="script/t3-jquery.min.js"></script>
     <script src="jqwidgets/jqx-all.js"></script>
-    
+
     <script src="script/main.js"></script>
 
 
@@ -32,7 +33,7 @@
     <script src="libraries/cola.min.js"></script>
     <script src="libraries/cytoscape-cola.js"></script>
 
-    <!-- services --> 
+    <!-- services -->
     <script src="services/mom.js"></script>
     <script src="services/drive.js"></script>
     <script src="services/chat.js"></script>
@@ -41,7 +42,7 @@
     <script src="services/ua.js"></script>
     <script src="services/sock.js"></script>
     <script src="services/graph.js"></script>
-    
+
     <!-- modules -->
     <script src="modules/moduletest 1.js"></script>
     <script src="modules/moduletest 2.js"></script>
@@ -53,15 +54,66 @@
     <script src="modules/moduletest 8.js"></script>
     <script src="modules/moduletest 9.js"></script>
     <script src="modules/moduletest 10.js"></script>
-    
-    
+
+
 </head>
+
 <body>
 
     <div id="splitter">
-        <div id="panelContainer"><div id="panel"><div id="logo"><img src="image/logo.svg" width="100%"></div></div></div>
-        <div id="mainContainer"><div id="main"></div></div>
+        <div id="panelContainer">
+            <div id="panel">
+                <div id="mainmenu">
+                    <p id="title">The Human Node Project</p>
+                    <div id='jqxMenu' style='visibility: hidden;'>
+                        <ul>
+                            <li><a href="#Home">Home</a></li>
+                            <li><a href="#Solutions">Solutions</a>
+                                <ul style='width: 250px;'>
+                                    <li><a href="#Education">Education</a></li>
+                                    <li><a href="#Financial">Financial services</a></li>
+                                    <li><a href="#Government">Government</a></li>
+                                    <li><a href="#Manufacturing">Manufacturing</a></li>
+                                    <li type='separator'></li>
+                                    <li>Software Solutions
+                                        <ul style='width: 220px;'>
+                                            <li><a href="#ConsumerPhoto">Consumer photo and video</a></li>
+                                            <li><a href="#Mobile">Mobile</a></li>
+                                            <li><a href="#RIA">Rich Internet applications</a></li>
+                                            <li><a href="#TechnicalCommunication">Technical communication</a></li>
+                                            <li><a href="#Training">Training and eLearning</a></li>
+                                            <li><a href="#WebConferencing">Web conferencing</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">All industries and solutions</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#Products">Products</a>
+                                <ul>
+                                    <li><a href="#PCProducts">PC products</a></li>
+                                    <li><a href="#MobileProducts">Mobile products</a></li>
+                                    <li><a href="#AllProducts">All products</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mainContainer">
+            <div id="main"></div>
+        </div>
     </div>
 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // create jqxMenu
+            $("#jqxMenu").jqxMenu({ width: '100%', height: '32px', autoSizeMainItems: true, theme: "GreenDarkMetro" });
+            $("#jqxMenu").jqxMenu('minimize');
+            $("#jqxMenu").css('visibility', 'visible');
+        });
+    </script>
+
 </body>
-</html> 
+
+</html>

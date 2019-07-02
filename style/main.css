@@ -3,17 +3,28 @@ body {
     color: white;
     font-family: asapregular;
     font-size: 0.8rem;
-    background: #000;
+    background: black;
 }
 
-#logo {
+#mainmenu {
     border-bottom: 1px solid #000;
     padding-right: 1px;
     background: #111;
+    color: #aaa;
 }
 
-#logo img {
+#mainmenu div {
     border-bottom: 4px solid #00CC11;
+    min-height: 4em;
+}
+
+#title {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    z-index: 2;
+    color: #eee;
+    font-style: italic;
 }
 
 #panel_container {

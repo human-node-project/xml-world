@@ -27,7 +27,10 @@ $(document).ready(function () {
             { size: "15%", min: 120 },
             { size: "85%" }
         ] 
+    }).on("resize", function(ev) {
+        $("#title").css("display", ev.args.panels[0].size < $("#title").width()+50 ? "none" : "block");
     });
+    $("#title").css("display", $("#panel").width() < $("#title").width()+50 ? "none" : "block");
 
     // T3js initialisation
 
@@ -155,6 +158,17 @@ jeda.in.toggleVisibility = function(item, givenName) {
 }
 
 
+
+/*
+ * Window resize
+ */
+
+window.onresize = function() {
+
+    setTimeout(function() {
+        $("#title").css("display", $("#panel").width() < $("#title").width()+50 ? "none" : "block");
+    }, 0);
+}
 
 
 

@@ -27,53 +27,53 @@ jeda.module.mod10 = {
                     container: $(ui).find('div'), // container to render in
                     elements: [ // list of graph elements to start with
                         {
-                            data: { id: 'id1' }
+                            data: { id: '#1' }
                         },
                         {
-                            data: { id: 'Berlingo' }
+                            data: { id: 'Renault' }
                         },
                         {
                             data: { id: 'car' }
                         },
                         {
-                            data: { id: 'id2' }
+                            data: { id: '#2' }
                         },
                         {
                             data: { id: 'is a' }
                         },
                         {
-                            data: { id: 'id3' }
+                            data: { id: '#3' }
                         },
                         {
                             data: { id: 'Peugeot' }
                         },
                         {
-                            data: { id: 'id4' }
+                            data: { id: '#4' }
                         },
                         {
-                            data: { id: 'id1-0', source: 'id1', target: 'Berlingo' }
+                            data: { id: '#1-0', source: '#1', target: 'Renault' }
                         },
                         {
-                            data: { id: 'id1-1', source: 'id1', target: 'car' }
+                            data: { id: '#1-1', source: '#1', target: 'car' }
                         },
                         {
-                            data: { id: 'id2-0', source: 'id2', target: 'id1' }
+                            data: { id: '#2-0', source: '#2', target: '#1' }
                         },
                         {
-                            data: { id: 'id2-1', source: 'id2', target: 'is a' }
+                            data: { id: '#2-1', source: '#2', target: 'is a' }
                         },
     
                         {
-                            data: { id: 'id3-0', source: 'id3', target: 'Peugeot' }
+                            data: { id: '#3-0', source: '#3', target: 'Peugeot' }
                         },
                         {
-                            data: { id: 'id3-1', source: 'id3', target: 'car' }
+                            data: { id: '#3-1', source: '#3', target: 'car' }
                         },
                         {
-                            data: { id: 'id4-0', source: 'id4', target: 'id3' }
+                            data: { id: '#4-0', source: '#4', target: '#3' }
                         },
                         {
-                            data: { id: 'id4-1', source: 'id4', target: 'is a' }
+                            data: { id: '#4-1', source: '#4', target: 'is a' }
                         },
                     ],
                     style: [ // the stylesheet for the graph
@@ -107,7 +107,7 @@ jeda.module.mod10 = {
                             selector: 'edge',
                             style: {
                                 'width': 3,
-                                'curve-style': 'bezier',
+                                'curve-style': 'straight',
                                 'line-color': '#999',
                                 'target-arrow-color': '#999',
                                 'target-arrow-shape': 'triangle',

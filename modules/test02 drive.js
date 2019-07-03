@@ -25,7 +25,7 @@ jeda.module.mod2 = {
                 ui = context.getElement();
 
                 mom.sub(
-                    "Module 1",
+                    "test-channel",
                     "calendar.*",
                     function(content, envelope) {
                         $(ui).find(".inbox").text("Module 2 got "+content+" from mom service");

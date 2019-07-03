@@ -22,8 +22,6 @@ jeda.module.mod1 = {
             init: function() {
 
 
-                var myChannel = mom.channel("Module 1");
-
                 ui = context.getElement();
 
                 $(ui).find("#calendar")
@@ -36,7 +34,7 @@ jeda.module.mod1 = {
                         var date = event.args.date;
                         $("#log").text(date.toDateString());
 
-                        myChannel.pub("calendar.related", date);
+                        mom.pub("test-channel", "calendar.related", date);
                     });
 
             },

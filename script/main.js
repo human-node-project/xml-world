@@ -28,7 +28,6 @@ $(document).ready(function () {
             { size: "85%" }
         ] 
     }).on("resize", function(ev) {
-//      $("#title").html(ev.args.panels[0].size < $("#title").width()+80 ? "Lab" : "The Human Node Project Lab");
         $("#title").html($("#panel").width() < 250 ? "Lab" : "The Human Node Project Lab");
     });
     $("#title").html($("#panel").width() < 250 ? "Lab" : "The Human Node Project Lab");
@@ -42,9 +41,18 @@ $(document).ready(function () {
         jeda.in.addBoard(m.name, html);
     }
 
+    // Sockjs url
+
+    jeda.in.sockjs_url = "/jeda";
+
+    // Init
+
     setTimeout( function() {
 
         console.log("Initialisation");
+
+        // Services and modules
+
         for (let current in jeda.service) {
             var s = jeda.service[current];
             console.log("  addService -> "+current);
@@ -57,9 +65,13 @@ $(document).ready(function () {
             Box.Application.addModule(name, m.code);
         }
 
+        // T3js init
+
         Box.Application.init({
             debug: true
         });
+
+        // Board init
 
         for (let current in jeda.module) {
             var m = jeda.module[current];
@@ -170,6 +182,7 @@ window.onresize = function() {
         $("#title").html($("#panel").width() < 250 ? "Lab" : "The Human Node Project Lab");
     }, 0);
 }
+
 
 
 

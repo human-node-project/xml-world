@@ -11,18 +11,20 @@ const fs = require('fs');
 // Our god-object
 
 var world = {};
-world.client = {}; // human, ai, whatever: sockets are all clients.
+world.client = {}; // modules which use the socket service are all clients
+world.avatar = {};
 
 
 
-// XML world, hard-coded for now
+// XML world file, hard-coded for now
 
 world.xmlRaw = fs.readFileSync("./world/world.xml", "utf-8");
 world.xmlDoc = new xmldoc.XmlDocument(world.xmlRaw);
 
 
 
-// World API
+
+// World interface for server.js
 
 exports.newConnection = function(id) {
 
@@ -35,7 +37,7 @@ exports.message = function(client, message) {
     try {
         var parsedMsg = JSON.parse(message);
 
-        if (!commands[parsedMsg.command]) throw("Command unknown");
+        if (!commands[parsedMsg.command]) throw Error("Command unknown");
 
         try {
             commands[parsedMsg.command](world, client, parsedMsg);
@@ -55,6 +57,17 @@ exports.close = function(id) {
 
     delete world.client[id];
 }
+
+
+
+// Avatars
+
+world.createAvatar = function(id) {
+
+    world.avatar[id] = {};
+}
+
+
 
 
 

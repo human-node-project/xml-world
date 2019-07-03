@@ -20,4 +20,12 @@ exports["god view"] = function(world, client, message) {
 
 
 
+exports["new avatar"] = function(world, client, message) {
+
+    client.write(JSON.stringify({ avatarId: client.id }));
+    world.createAvatar(client.id);
+}
+
+
+
 

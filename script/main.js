@@ -28,9 +28,10 @@ $(document).ready(function () {
             { size: "85%" }
         ] 
     }).on("resize", function(ev) {
-        $("#title").css("display", ev.args.panels[0].size < $("#title").width()+50 ? "none" : "block");
+//      $("#title").html(ev.args.panels[0].size < $("#title").width()+80 ? "Lab" : "The Human Node Project Lab");
+        $("#title").html($("#panel").width() < 250 ? "Lab" : "The Human Node Project Lab");
     });
-    $("#title").css("display", $("#panel").width() < $("#title").width()+50 ? "none" : "block");
+    $("#title").html($("#panel").width() < 250 ? "Lab" : "The Human Node Project Lab");
 
     // T3js initialisation
 
@@ -166,7 +167,7 @@ jeda.in.toggleVisibility = function(item, givenName) {
 window.onresize = function() {
 
     setTimeout(function() {
-        $("#title").css("display", $("#panel").width() < $("#title").width()+50 ? "none" : "block");
+        $("#title").html($("#panel").width() < 250 ? "Lab" : "The Human Node Project Lab");
     }, 0);
 }
 

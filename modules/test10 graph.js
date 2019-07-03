@@ -7,7 +7,7 @@ jeda.module.mod10 = {
 
         <h1>Raw Cytoscape test</h1>
 
-        <div style="width:100%; height:50vh;"></div>
+        <div style="width: 90%; margin-left: auto; margin-right: auto; height: 50vh; background-color: #222; border: 1px solid #333;"></div>
   
     `,
     

@@ -1,36 +1,62 @@
 'use strict';
 
+
+
 const http = require('http');
 const sockjs = require('sockjs');
 const node_static = require('node-static');
+const world = require('./world/world.js');
 
-// 1. Jeda sockjs server
+
+
+// Jeda sockjs server
+
 const sockjs_opts = {
-  prefix: '/jeda'
+    prefix: '/jeda',
+    log: function(severity, message) {
+        console[severity]("[server.js] "+message);
+    }
 };
 
 const sockjs_echo = sockjs.createServer(sockjs_opts);
 sockjs_echo.on('connection', function(conn) {
-  conn.on('data', function(message) {
 
-    conn.write(message.toUpperCase()); // echo uppercase
+    world.newConnection(conn.id);
 
-  });
+    conn.on('data', function(message) { world.message(conn, message); });
+
+    conn.on('close', function() { world.close(conn.id); });
 });
 
-// 2. Static files server
+
+
+// Static files server
+
 const static_directory = new node_static.Server(__dirname);
 
-// 3. Usual http stuff
+
+
+// Usual http stuff
+
 const server = http.createServer();
+
 server.addListener('request', function(req, res) {
-  static_directory.serve(req, res);
+
+    static_directory.serve(req, res);
 });
+
 server.addListener('upgrade', function(req, res) {
-  res.end();
+
+    res.end();
 });
 
-sockjs_echo.installHandlers(server, {prefix:'/jeda'});
+sockjs_echo.installHandlers(server, { prefix: '/jeda' });
 
-console.log(' [*] Listening on 0.0.0.0:9999');
+
+
+// Open server
+
 server.listen(80, '0.0.0.0');
+console.log('[server.js] Listening');
+
+

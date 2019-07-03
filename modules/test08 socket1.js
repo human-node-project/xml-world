@@ -8,7 +8,7 @@ jeda.module.mod8 = {
         <h1>Socket test 1</h1>
 
         <div>
-            <div id="socket-log1"></div><br>
+            <pre id="socket-log1"></pre><br>
             <input autocomplete="off" value="Type here..."></input>
         </div>
   

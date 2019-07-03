@@ -2,5 +2,9 @@
   "name": "js-44fuew",
   "version": "0.0.0",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "faye-websocket": "^0.11.3",
+    "libxmljs": "^0.19.5",
+    "xmldoc": "^1.1.2"
+  }
 }

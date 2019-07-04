@@ -4,7 +4,7 @@
     <head>
     </head>
     <body>
-        <room>
+        <room id="room1" enterable="true">
             <object>
                 <face>
                     <p>This is the appearance of the object.</p>
@@ -21,6 +21,8 @@
                     </object>
                 </body>
             </object>
+        </room>
+        <room id="room2" enterable="true">
         </room>
     </body>
 </world>

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "faye-websocket": "^0.11.3",
+    "jsonq": "^1.2.0",
     "libxmljs": "^0.19.5",
     "xmldoc": "^1.1.2"
   }

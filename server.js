@@ -23,6 +23,12 @@ sockjs_echo.on('connection', function(conn) {
 
     world.newConnection(conn.id);
 
+    conn.send = function(msg) {
+
+        console.log("[server.js] Sending: "+msg);
+        this.write(msg);
+    };
+
     conn.on('data', function(message) { world.message(conn, message); });
 
     conn.on('close', function() { world.close(conn.id); });

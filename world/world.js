@@ -5,6 +5,7 @@
 const commands = require('./commands.js');
 const xmldoc = require('xmldoc');
 const fs = require('fs');
+const jsonQ = require('jsonq');
 
 
 
@@ -20,7 +21,7 @@ world.avatar = {};
 
 world.xmlRaw = fs.readFileSync("./world/world.xml", "utf-8");
 world.xmlDoc = new xmldoc.XmlDocument(world.xmlRaw);
-
+world.xmlQ = jsonQ(world.xmlDoc);
 
 
 
@@ -65,6 +66,11 @@ exports.close = function(id) {
 world.createAvatar = function(id) {
 
     world.avatar[id] = {};
+
+    var p = world.xmlQ.find("enterable", function() { return this == "true"; }).parent().parent();
+    p.each(function (index, path, value) {
+        console.log(value.name+': '+value.attr.id);
+    });
 }
 
 

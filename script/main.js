@@ -82,9 +82,9 @@ $(document).ready(function () {
         }
         console.log("Init done.");
 
-        $("#main").removeClass("hidden");
-
     }, 1000);
+
+    $("#main").removeClass("hidden");
 });
 
 
@@ -185,7 +185,4 @@ window.onresize = function() {
         $("#title").html($("#panel").width() < 250 ? "Lab" : "The Human Node Project Lab");
     }, 0);
 }
-
-
-
 

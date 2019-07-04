@@ -5,8 +5,6 @@ jeda.module.mod6 = {
 
     html: `
 
-        <h1>User agent test</h1>
-
         <pre style="font-family: monospace"></pre>
 
     `,

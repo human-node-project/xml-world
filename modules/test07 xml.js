@@ -5,8 +5,6 @@ jeda.module.mod7 = {
 
     html: `
 
-        <h1>Code highlighting test</h1>
-
         <textarea>
 
             <?xml version="1.0" encoding="UTF-8"?>

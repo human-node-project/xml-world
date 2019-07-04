@@ -5,8 +5,6 @@ jeda.module.mod3 = {
 
     html: `
 
-        <h1>Chatbot test</h1>
-
         <input type="text">
         <br>
         <p class="reply"></p>

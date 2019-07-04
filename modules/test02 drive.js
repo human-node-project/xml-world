@@ -5,7 +5,6 @@ jeda.module.mod2 = {
 
     html: `
 
-        <h1>IndexDB Drive test</h1>
         <p>Inbox: <span class="inbox"></span></p>
         <div class="drive_test_log"></div>
 

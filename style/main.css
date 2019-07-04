@@ -1,8 +1,7 @@
 
 body {
     color: white;
-    font-family: asapregular;
-    font-size: 0.8rem;
+    font-family: Calibri, asapregular;
     background: black;
 }
 
@@ -33,7 +32,7 @@ body {
 }
 
 #panel {
-    font-family: asapregular;
+    font-family: Calibri, asapregular;
     background: #222;
     width: calc(100% + 17px);
     height: calc(100vh + 17px);
@@ -67,11 +66,12 @@ body {
 }
 
 #main {
-    font-family: asapregular;
+    font-family: Calibri, asapregular;
     background: #000;
     width: calc(100% + 17px);
     height: calc(100vh + 17px);
     overflow: scroll;
+    transition: opacity 2s ease-in;
 }
 
 .panel_item {
@@ -154,4 +154,8 @@ body {
 input, button, textarea {
     margin-right: 1em !important;
     margin-bottom: 1em !important;
+}
+
+.hidden {
+    opacity: 0;
 }

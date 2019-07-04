@@ -5,10 +5,9 @@ jeda.module.mod10 = {
 
     html: `
 
-        <h1>Raw Cytoscape test</h1>
-
+        <br>
         <div style="width: 90%; margin-left: auto; margin-right: auto; height: 50vh; background-color: #222; border: 1px solid #333;"></div>
-  
+        <br>
     `,
     
     code: function(context) {
@@ -93,7 +92,7 @@ jeda.module.mod10 = {
                                 'width': 'label',
                                 'padding': '8px',
                                 'font-size': '16px',
-                                'font-family': 'asapregular'
+                                'font-family': 'Calibri, asapregular'
                             }
                         },
                         {
@@ -111,7 +110,7 @@ jeda.module.mod10 = {
                                 'line-color': '#999',
                                 'target-arrow-color': '#999',
                                 'target-arrow-shape': 'triangle',
-                                'arrow-scale': 1
+                                'arrow-scale': 1.25
                             }
                         }
                     ],

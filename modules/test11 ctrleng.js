@@ -5,8 +5,6 @@ jeda.module.mod11 = {
 
     html: `
 
-        <h1>CtrlEng test</h1>
-
         <p>Input:</p>
         <input type="text">
         <br>

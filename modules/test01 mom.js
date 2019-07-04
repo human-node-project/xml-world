@@ -5,7 +5,6 @@ jeda.module.mod1 = {
 
     html: `
 
-        <h1>Message oriented middleware test</h1>
         <p>Ok</p>
         <div id='calendar'>x</div>
         <div id="log">log</div>

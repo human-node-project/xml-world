@@ -5,8 +5,6 @@ jeda.module.mod5 = {
 
     html: `
 
-        <h1>Search engine test</h1>
-
         <code></code>
 
     `,

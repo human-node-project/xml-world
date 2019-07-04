@@ -21,6 +21,7 @@ $(document).ready(function () {
 
     // page splitter
     $("#splitter").jqxSplitter({
+        theme: "GreenDarkMetro",
         width: "100%",
         height: "100%",
         panels: [
@@ -80,6 +81,8 @@ $(document).ready(function () {
             Box.Application.start($("#board_"+name+" .board_item_content")[0]);
         }
         console.log("Init done.");
+
+        $("#main").removeClass("hidden");
 
     }, 1000);
 });

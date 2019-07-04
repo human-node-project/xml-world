@@ -5,8 +5,6 @@ jeda.module.mod4 = {
 
     html: `
 
-        <h1>Logic test</h1>
-
         <code></code>
 
     `,
